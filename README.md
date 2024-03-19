@@ -22,4 +22,4 @@ Asp.Net 8 ile geliştirilmiş - MVC Projesi örneği
 ## Kurulum
 - Migration dosyaları silindikten sonra , add-migration ve update-database komutları kullanılarak veritabanı ayaklandırılabilir.
 - Veritabanında default olarak admin bilgileri gelecektir. Admin için şifre **123**
-- User ve Admin için görüntülenen ayrı mimari
+
