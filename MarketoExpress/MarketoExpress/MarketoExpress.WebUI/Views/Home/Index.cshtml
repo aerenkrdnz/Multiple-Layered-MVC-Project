@@ -1,0 +1,23 @@
+﻿
+<div class="p-5 mb-4 mt-5 mb-5 rounded-3" style="background-color:mediumpurple;">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">MarketoExpress Alışveriş Sitesi</h1>
+		<p class="col-md-8 fs-4">İhtiyaçlarınıza Özel, Sürpriz Fiyatlarla!</p>
+		
+    </div>
+</div>
+
+<div class="row">
+
+	<div class="col-3">
+
+		<vc:categories></vc:categories>
+
+	</div>
+
+	<div class="col-9">
+		<vc:products category-id="@ViewBag.CategoryId"></vc:products>
+	</div>
+
+
+</div>

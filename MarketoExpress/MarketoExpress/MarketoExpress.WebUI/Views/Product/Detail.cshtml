@@ -1,0 +1,130 @@
+﻿@model List<ProductViewModel>
+<html lang="en" data-bs-theme="light">
+<head>
+	<script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+	<meta name="generator" content="Hugo 0.118.2">
+	<title>Product example · Bootstrap v5.3</title>
+
+	<link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/product/">
+
+	<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		
+
+	<link href="product.css" rel="stylesheet">
+</head>
+<body>
+
+
+	<nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
+		<div class="container">
+			<a class="navbar-brand d-md-none" href="#">
+				<svg class="bi" width="24" height="24"><use xlink:href="#aperture"></use></svg>
+				Aperture
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="#offcanvas" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="#offcanvas" aria-labelledby="#offcanvasLabel">
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="#offcanvasLabel">Aperture</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<ul class="navbar-nav flex-grow-1 justify-content-between">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<svg class="bi" width="24" height="24"><use xlink:href="#aperture"></use></svg>
+
+						<li class="nav-item">
+							
+							<a asp-area="" asp-controller="" asp-action="" class="btn btn-outline-warning fw-bold" aria-current="page">
+							 Ana Sayfa
+							</a>
+
+
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<div class="position-relative overflow-hidden p-3 p-md-3 mb-3 mt-3 text-center bg-body-tertiary">
+			<div class="col-md-6 p-lg-10 mx-auto my-5">
+				<h1 class="display-3 fw-bold">Ürünleri Aşağıdan İnceleyebilirsiniz.</h1>
+
+			</div>
+			<div class="product-device shadow-sm d-none d-md-block"></div>
+			<div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+		</div>
+	</main>
+
+	<div class="row">
+
+		@if (Model.Any())
+		{
+			@foreach (var item in Model)
+			{
+				<div class="col-2 mb-3">
+					<div class="card shadow-sm" style="height:420px">
+
+						<div class="card-header" style="width:100%">
+
+							@if (!string.IsNullOrWhiteSpace(item.ImagePath))
+							{
+								<img style="width:100%; height:225px" src="~/images/products/@item.ImagePath" />
+							}
+							else
+							{
+								<img style="width:100%; height:225px" src="~/images/no-images.png" />
+							}
+
+						</div>
+
+						<div class="card-body">
+							<p class="card-text fw-bold">@item.Name</p>
+							<p class="card-text fw-bold" style="position: absolute; bottom: 7; left: 7;">@item.UnitPrice TL</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+								</div>
+								<small class="text-body-secondary" style="position: absolute; bottom: 7; right: 7;">
+
+									@if (item.UnitsInStock <= 5)
+									{
+										<span class="text-danger">Tükeniyor</span>
+									}
+
+								</small>
+							</div>
+						</div>
+					</div>
+				</div>
+			}
+
+
+		}
+		else
+		{
+			<div class="alert alert-warning">
+				Bu Kategoride ürün yok.
+			</div>
+		}
+
+
+	</div>
+	
+	<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
