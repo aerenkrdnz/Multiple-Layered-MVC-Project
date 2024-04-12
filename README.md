@@ -16,7 +16,7 @@ Asp.Net 8 ile geliştirilmiş - MVC Projesi örneği
 - Generic Repository Design Pattern
 - Javascript / Jquery
 - Bootstrap
-- Toastr/SweetAlert/LightBox/DataTables
+- SweetAlert/DataTables
 
 
 ## Kurulum
