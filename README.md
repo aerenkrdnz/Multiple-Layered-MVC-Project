@@ -8,35 +8,19 @@ Bilge Adam Akademi Kursu Tamamlamak İçin Yapmış Olduğum MVC Projesi
 
 Asp.Net 8 ile geliştirilmiş - MVC Projesi örneği
 
-
 ## Kullanılan Teknolojiler
-- AspNet Core 8.0
-- Asp.Net Core Api
-- SignalR
-- Swagger
-- Dto
-- N Tier Architecture
-- MSSQL
-- İlişkili Tablolar
-- Html Css Bootstrap
-- JavaScript
-- Ajax
-- Entity Framework - Linq
-- Alert
-- Basket
-- Rezervasyon İşlemleri
-- Real-Time Uygulamalar
-- Real-Time Mesajlaşma
-- Real-Time İstatistik
-- Real-Time Bildirim
-- Mail Gönderme İşlemleri
-Ve çok daha fazlası
+- Sql Server
+- Entity Framework Core
+- MVC Design Pattern
+- Generic Repository Design Pattern
+- Javascript / Jquery
+- Bootstrap
+- SweetAlert/DataTables
 
 
 ## Kurulum
-- DataAccessLayer library de bulunan Concrete folder içerisindeki SignalRContext sınıfında bulunan veritabanı ayarları güncellenecek.
 - Migration dosyaları silindikten sonra , add-migration ve update-database komutları kullanılarak veritabanı ayaklandırılabilir.
-- /Register/Index sayfasına giderek kayıt oluşturduktan sonra /Login/Index sayfasında giriş işlemi yapıp siteye ulaşım sağlanabilir. 
+- Veritabanından UserType 2 yaparak admin yetkilerine ulaşılabilir.
 
 
 
