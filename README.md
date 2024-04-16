@@ -9,7 +9,7 @@ Bilge Adam Akademi Kursu Tamamlamak İçin Yapmış Olduğum MVC Projesi
 Asp.Net 8 ile geliştirilmiş - MVC Projesi örneği
 
 
-### Kullanılan Teknolojiler
+## Kullanılan Teknolojiler
 -AspNet Core 8.0
 -Asp.Net Core Api
 -SignalR
